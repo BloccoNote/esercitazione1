@@ -12,6 +12,7 @@
 #include<iostream>
 #include<cmath>
 #include<cstring>
+#include"CFunction.h"
 using namespace std;
 
 
@@ -50,5 +51,5 @@ class Logarithmic : public Function{
 	
 
 
-}
+};
 #endif

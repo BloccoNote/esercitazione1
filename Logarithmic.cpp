@@ -50,7 +50,7 @@ void Logarithmic::impostak(double k){
 ///@brief imposta il valore b
 ///@param b
 void Logarithmic::impostab(double b){
-	if(b =< 0.0){
+	if(b <= 0.0){
 		cout<<"errore impostando base, deve essere >0"<<endl<<flush;
 		return;
 	}else{
@@ -62,16 +62,16 @@ void Logarithmic::impostab(double b){
 ///@param b
 ///@param k
 void Logarithmic::impostacoef(double b, double k){
-	if(b =< 0.0){
-		cout<<"errore impostando base, deve essere >0"<<endl<<flush;
-		return;
-	}else{
+	if(b > 0.0){
 		b_coeff = b;
 		k_coeff = k;
+		return;
+	}else{
+		cout<<"errore impostando base, deve essere >0"<<endl<<flush;
 		return;
 	}
 }
 ///@brief dump dei dati
-void Dump(){
-	cout<<"dumping funzione logaritmica"<<endl<<"base: "<<b_coeff<<" coefficente: "<<k_coeff<<endl<<flush;
+void Logarithmic::Dump(){
+	cout<<"dumping funzione logaritmica"<<endl<<"base: "<< b_coeff<<" coefficente: "<<k_coeff<<endl<<flush;
 }
