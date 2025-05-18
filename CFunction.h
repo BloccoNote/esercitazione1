@@ -30,8 +30,10 @@ public:
 	virtual double GetValue(double in)=0;
 	/// @}
 
-	/// @name DEBUG 
+	/// @name DEBUG and SERIALIZATION 
 	/// @{
+	void ErrorMessage(const char *string); 
+	void WarningMessage(const char *string);
 	virtual void Dump()=0;
 	/// @}
 
