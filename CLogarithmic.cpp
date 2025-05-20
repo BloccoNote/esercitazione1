@@ -16,7 +16,7 @@ using namespace std;
 ///@brief Default constructor
 ///@note it sets the base = 10 and coefficent = 0 as default
 Logarithmic::Logarithmic(){
-	SetCoeff(10, 0.0);
+	SetCoeff(10.0, 0.0);
 }
 
 ///@brief Copy-Constructor
@@ -59,9 +59,9 @@ bool Logarithmic::operator==(const Logarithmic& l){
 ///@param x
 ///@return y
 double Logarithmic::GetValue(double in){
-	if(in < 0){
+	if(in < 0.0){
 		ErrorMessage("'in' value should be > 0");
-		return 0;
+		return 0.0;
 	}
 	return k_coeff*(log2(in) / log2(b_coeff));
 }
